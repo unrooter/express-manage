@@ -1,0 +1,26 @@
+.navbar{
+	background:#488ced;
+}
+.nav-stacked li{
+	text-align: center;
+	font-size: 18px;
+}
+.navbar-brand{
+	color:#fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.table-bordered th{
+	background:#e4e0e4;
+}
+.reception{
+	font-size: 16px;
+	font-weight: bold;
+}
+.navbar-defailt{
+	margin-bottom: 0;
+}
+.glyphicon-plus{
+	color:red;
+	font-size: 20px;
+}
