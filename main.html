@@ -24,17 +24,16 @@
 					</form>
 				</div>
 				<div class="col-md-3">
-					<form class="navbar-form navbar-right">
+					<div class="navbar-form navbar-right">
 						<div class="form-group">
 						    <a href="#"><span class="glyphicon glyphicon-plus"></span></a>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
 	  <!--侧边导航栏-->
-	 <!--侧边导航栏-->
 	<div class="clear"></div>
 		<div class="row">
 			<div class="col-md-2">
@@ -45,52 +44,7 @@
 					<li><a href="tab3.html"><span class="glyphicon glyphicon-star">&nbsp;tab3</span></a></li>
 				</ul>
 			</div>
-			<div class="col-md-8">
-				<table class="table table-hover table-bordered">
-				    <caption class="reception">Today </caption>
-				    <thead>
-				        <tr>
-				        	<th class="stuid">logId</th>
-				        	<th>houseName</th>
-				        	<th>studentName</th>
-				        	<th>arriveDate</th>
-				        	<th>collectDate</th>
-				        	<th>confirmState</th>
-				        	<th>operate</th>
-	                    </tr>
-				    </thead>
-				    <tbody id="target">
-				        <tr>
-				        	<td>aaa</td>
-				        	<td>bbb</td>
-				        	<td>ccc</td>
-				        	<td>111</td>
-				        	<td>222</td>
-				        	<td>1</td>
-				        	<td><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-trash"></span></td>
-				        </tr>
-				    </tbody>
-				</table>
-			</div>
 		</div>
 	</div>
 	</body>
-	<script type="text/javascript">
-		$("ducument").ready(function(){
-		$.getJSON('json.json',function(data){
-			alert(data+'========');
-			var html = '';
-			for(i=0;i<data.length;i++){
-				html +='<tr><td>'
-						+data[i].logId+'</td><td>'
-						+data[i].houseName+'</td><td><td>'
-						+data[i].studentName+'</td><td>'
-						+data[i].arriveDate+'</td><td>'
-						+data[i].collectDate+'</td></tr>'
-						+data[i].confirmState+'</td></tr>';
-						}
-						$('#target').html(html);
-				});
-			});
-</script>
 </html>
