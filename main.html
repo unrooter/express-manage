@@ -24,11 +24,11 @@
 					</form>
 				</div>
 				<div class="col-md-3">
-					<div class="navbar-form navbar-right">
+					<form class="navbar-form navbar-right">
 						<div class="form-group">
 						    <a href="#"><span class="glyphicon glyphicon-plus"></span></a>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -38,13 +38,36 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul class="nav nav-pills nav-stacked">
-				    <li><a href="main.html"><span class="glyphicon glyphicon-home">&nbsp;main</span></a></li>
-					<li><a href="tab1.html"><span class="glyphicon glyphicon-star">&nbsp;tab1</span></a></li>
-					<li><a href="tab2.html"><span class="glyphicon glyphicon-star">&nbsp;tab2</span></a></li>
-					<li><a href="tab3.html"><span class="glyphicon glyphicon-star">&nbsp;tab3</span></a></li>
+				    <li><a onclick="main();"><span class="glyphicon glyphicon-home">&nbsp;main</span></a></li>
+					<li><a onclick="tab1();"><span class="glyphicon glyphicon-star">&nbsp;tab1</span></a></li>
+					<li><a onclick="tab2();"><span id="tab2" class="glyphicon glyphicon-star">&nbsp;tab2</span></a></li>
+					<li><a onclick="tab3();"><span id="tab3" class="glyphicon glyphicon-star">&nbsp;tab3</span></a></li>
 				</ul>
 			</div>
+			<div id="tab"></div>
 		</div>
 	</div>
 	</body>
+	<script type="text/javascript">
+		$(document).ready(main());
+		function main(){
+			var str ="<div class='col-md-8'><table class='table table-hover table-bordered'><caption class='reception'>Today </caption> <thead><tr><th class='stuid'>logId</th><th>houseName</th><th>studentName</th><th>arriveDate</th><th>collectDate</th><th>confirmState</th><th>operate</th> </tr></thead><tbody id='target'><tr><td>aaa</td><td>bbb</td><td>ccc</td><td>111</td><td>222</td><td>1</td><td><span class='glyphicon glyphicon-pencil'></span>&nbsp;&nbsp;<span class='glyphicon glyphicon-trash'></span></td></tr></tbody></table></div>"
+			document.getElementById("tab").innerHTML = str;
+		}
+
+		function tab1(){
+			var str ="<div class='col-md-8'><table class='table table-hover table-bordered'><caption class='reception'>Today </caption><thead><tr><th class='stuid'>houseRoom</th><th>studentId</th><th>studentName</th><th>wechatId</th><th>operate</th></tr></thead><tbody id='target'><tr><td>FH201</td><td>6097248</td><td>QIAORUI CUI</td><td>ben0000</td><td><span class='glyphicon glyphicon-pencil'></span>&nbsp;&nbsp;<span class='glyphicon glyphicon-trash'></span></td></tr></tbody></table></div>"
+			document.getElementById("tab").innerHTML = str;
+		}
+
+		function tab2(){
+			var str ="<div class='col-md-8'><h4>NOTE</h4><textarea class='note' cols='150' rows='10'></textarea></div>"
+			document.getElementById("tab").innerHTML = str;
+		}
+
+		function tab3(){
+			var str ="<div class='col-md-8'><h4>UPDATE</h4><textarea class='note' cols='150' rows='10'></textarea></div>"
+			document.getElementById("tab").innerHTML = str;
+		}
+</script>
 </html>
